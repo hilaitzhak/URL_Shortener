@@ -1,0 +1,14 @@
+@import '../../variables.scss';
+
+.app-button-wrapper {
+    width: 25%;
+    height: 70px;
+
+    &> .app-button {
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}

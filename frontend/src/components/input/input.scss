@@ -1,0 +1,24 @@
+@import '../../variables.scss';
+
+.app-input-wrapper {
+    height: 70px;
+    width: 100%;
+    margin-right: 15px;
+    &> .app-input {
+        background-color: #fff;
+        border: 1px solid rgba(175,185,197,.36);
+        border-radius: 4px;
+        color: #161c34;
+        font-size: 20px;
+        height: 50px;
+        line-height: 28px;
+        margin-bottom: 0;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        width: 100%;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

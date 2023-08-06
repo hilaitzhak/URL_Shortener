@@ -1,0 +1,22 @@
+@import '../../variables.scss';
+
+.app-main-wrapper {
+    height: 40%;
+    width: 80%;
+    border: 3px dashed $base-color;
+    border-radius: 5px;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-row {
+    margin: 20px 0;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.second-row {
+    height: 100%;
+    width: 100%;
+}

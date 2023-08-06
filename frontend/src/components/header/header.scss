@@ -1,0 +1,12 @@
+@import '../../variables.scss';
+
+.app-header-wrapper {
+    height: 70px;
+    background-color: $base-color;
+    padding: 40px 20px;
+}
+
+.app-header-title {
+    font-family: 'Arial';
+    font-size: 50px;
+}
