@@ -9,6 +9,17 @@
         width: 100%;
         cursor: pointer;
         font-weight: bold;
+        border-radius: 20px;
         font-size: 20px;
+        border: none;
+        background-color: $base-color-button;
+        color: $text-color;
+    }
+}
+@media only screen and (max-width: $phone-width) {
+    .app-button-wrapper {
+        &> .app-button {
+            font-size: 15px;
+        }
     }
 }

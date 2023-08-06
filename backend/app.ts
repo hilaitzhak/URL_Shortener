@@ -8,20 +8,23 @@ import { DBConnectionProvider } from './src/providers/db.provider';
 import { DBService } from './src/services/db.service';
 import { initDBService } from './src/services/init-db.service';
 import { UrlDBService } from './src/services/url-db.service';
+import { AppConfig } from './src/models/config';
+const app_config = new AppConfig();
 
 const validateURL = (url: string): boolean => {
     return Boolean(isUri(url));
 };
 
+
 const initDB = async () => {
-    await DBConnectionProvider.connect();
+    await DBConnectionProvider.connect(app_config.db);
     const init_db_service = new initDBService();
     await init_db_service.init();
 };
 
 const main = async () => {
     const server: Express = express();
-    const port = 3001;
+    const port = app_config.port;
     await initDB();
  
     server.use(cors());
