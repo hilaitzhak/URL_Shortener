@@ -11,7 +11,7 @@ function AppInput(props: AppInputProps) {
 
     return (
         <div className='app-input-wrapper app-column'>
-            <input className='app-input' onChange={onChange}/>
+            <input className='app-input' placeholder="Enter the link here" onChange={onChange}/>
         </div>
     );
 }
