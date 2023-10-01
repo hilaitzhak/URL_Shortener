@@ -51,34 +51,34 @@ function AppMain() {
             <div className='icons-box app-column'>
                 <div className='app-row'>
                     <div className='container align-center'>
-                        <ThumbUpOffAlt fontSize="large" style={{ fontSize: 'xxx-large', maxWidth: '100%', height: 'auto', verticalAlign: 'middle' }} />
+                        <ThumbUpOffAlt style={{ fontSize: 'xxx-large', maxWidth: '100%', height: 'auto', verticalAlign: 'middle', color: 'white' }} />
                         <h3>Easy</h3>
                         <p className="icon-paragraph">Simplify long web addresses and Make your links shorter in seconds</p>
                     </div>
                     <div className='container align-center'>
-                        <Share fontSize="large" style={{ fontSize: 'xxx-large', maxWidth: '100%', height: 'auto', verticalAlign: 'middle'}}/>
+                        <Share style={{ fontSize: 'xxx-large', maxWidth: '100%', height: 'auto', verticalAlign: 'middle', color: 'white'}}/>
                         <h3>Share</h3>
                         <p className="icon-paragraph">Share links seamlessly, perfect for social media, emails, and text messages</p>
                     </div>
                     <div className='container align-center'>
-                        <InsertEmoticon fontSize="large" style={{ fontSize: 'xxx-large', maxWidth: '100%', height: 'auto', verticalAlign: 'middle' }} />
+                        <InsertEmoticon style={{ fontSize: 'xxx-large', maxWidth: '100%', height: 'auto', verticalAlign: 'middle', color: 'white' }} />
                         <h3>User Friendly</h3>
                         <p className="icon-paragraph">Enhance navigation with user-friendly links and provide a better browsing experience</p>
                     </div>
                 </div>
                 <div className='app-row'>
                     <div className='container align-center'>
-                        <VisibilityOutlined fontSize="large" style={{ fontSize: 'xxx-large', maxWidth: '100%', height: 'auto', verticalAlign: 'middle' }}/>
+                        <VisibilityOutlined style={{ fontSize: 'xxx-large', maxWidth: '100%', height: 'auto', verticalAlign: 'middle', color: 'white' }}/>
                         <h3>Aesthetics</h3>
                         <p className="icon-paragraph">Create cleaner, neater URLs and upgrade your link presentation</p>
                     </div>
                     <div className='container align-center'>
-                        <MonetizationOnOutlined fontSize="large" style={{ fontSize: 'xxx-large', maxWidth: '100%', height: 'auto', verticalAlign: 'middle' }} />
+                        <MonetizationOnOutlined fontSize="large" style={{ fontSize: 'xxx-large', maxWidth: '100%', height: 'auto', verticalAlign: 'middle', color: 'white' }} />
                         <h3>Free</h3>
                         <p className="icon-paragraph">Start shortening links for free, no cost to start</p>
                     </div>
                     <div className='container align-center'>
-                        <MobileFriendly style={{  fontSize: 'xxx-large', maxWidth: '100%', height: 'auto', verticalAlign: 'middle' }}/>
+                        <MobileFriendly style={{ fontSize: 'xxx-large', maxWidth: '100%', height: 'auto', verticalAlign: 'middle', color: 'white' }}/>
                         <h3>Mobile Friendly</h3>
                         <p className="icon-paragraph">Optimized for mobile apps and websites</p>
                     </div>
