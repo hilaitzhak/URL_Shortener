@@ -1,11 +1,13 @@
 import React from 'react';
 import './content.scss';
-import AppMain from '../main/main';
+import AppUrlBox from '../urlBox/urlBox';
+// import AppIconsBox from '../iconsBox/iconsBox';
 
 function AppContent() {
     return (
         <div className='app-content-wrapper align-center'>
-            <AppMain/>
+            <AppUrlBox/>
+            {/* <AppIconsBox/> */}
         </div>
     );
 }

@@ -2,11 +2,16 @@
 
 .app-footer-wrapper {
     text-align: center;
+    height: 30px;
     padding: 10px;
-    // background-color: $base-color-header;
     position: sticky;
     bottom: 0;
     align-items: center;
     justify-content: center;
-    color: #dfd6d6;
+    
+
+    &> .app-footer-para {
+        color: #434242;
+        font-size: 13px;
+    }
 }

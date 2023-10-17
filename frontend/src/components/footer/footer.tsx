@@ -4,7 +4,7 @@ import './footer.scss';
 function AppFooter() {
     return (
         <div className='app-footer-wrapper align-center'>
-            <p>© Hila Itzhak All rights reserved.</p>
+            <p className='app-footer-para'>© Hila Itzhak All rights reserved.</p>
         </div>
     );
 }

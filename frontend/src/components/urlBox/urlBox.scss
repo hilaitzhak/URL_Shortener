@@ -1,0 +1,113 @@
+@import '../../variables.scss';
+
+.app-url-box-wrapper {
+    // height: 40%;
+    // width: 80%;
+    // border: 3px dashed $base-color;
+    // border-radius: 5px;
+    // padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.url-box {
+    // margin: 0 0 40px 0;
+    width: 600px;
+    height: 250px;
+    box-shadow: 0 2px 4px #ccc;
+    border-radius: 10px;
+    padding: 5px 30px 10px 30px;
+    // background: #fbf9f9;
+    text-align: center;
+    color: #000000;
+}
+
+.app-url-box-title-wrapper {
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 15px;
+
+    &> .app-url-box-title {
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
+
+.app-url-box-input-button-wrapper {
+    flex-direction: row;
+    display: flex;
+    padding: 15px;
+}
+
+.app-url-box-para-wrapper {
+    width: 95%;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 15px;
+
+    &> .app-url-box-para {
+        font-size: 15px;
+        font-weight: 300;
+    }
+}
+
+// .icons-box {
+//     height: 40%;
+//     width: 80%;
+//     // border: 3px dashed $base-color;
+//     // border-radius: 5px;
+//     // padding: 0 20px;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+// .container {
+//     // width: 33.33%;
+//     // min-height: 210px;
+//     // padding: 40px 10px;
+//     // align-items: center;
+//     // justify-content: center;
+//     display: flex;
+//     flex-direction: column; /* Stack elements vertically */
+//     align-items: center; /* Center elements horizontally */
+//     justify-content: center; /* Center elements vertically */
+//     width: 33.33%;
+//     min-height: 210px;
+//     padding: 30px 10px;
+// }
+
+// h3 {
+//     margin: 10px 2px 2px 2px;
+//     font: bold 20px asap,arial;
+//     color: #8f7a7a;
+//     letter-spacing: 0;
+//     text-align: center;
+// }
+
+// .icon-paragraph {
+//     font: 17px "source sans pro",arial;
+//     color: #b3a6a6;
+//     line-height: 1.5;
+//     text-align: left;
+//     padding: 10px 2px 50px 2px;
+//     text-align: center;
+// }
+
+// .first-row {
+//     margin: 20px 0;
+//     justify-content: space-between;
+//     width: 100%;
+// }
+
+// .second-row {
+//     height: 100%;
+//     width: 100%;
+// }
