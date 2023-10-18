@@ -8,19 +8,29 @@
 
     &> .app-input {
         background-color: #fff;
-        border: 1px solid rgba(175,185,197,.36);
-        color: #161c34;
+        // border: 1px solid rgba(175,185,197,.36);
+        // color: #161c34;
         font-size: 20px;
         line-height: 28px;
         margin-bottom: 0;
         width: 100%;
-        border-radius: 20px;
+        // border-radius: 20px;
         box-sizing: inherit;
         padding: 20px;
+        color: #8707ff;
+        border: 2px solid #8707ff;
+        border-radius: 10px;
+        // padding: 10px 25px;
+        background: transparent;
+
         &:focus {
             outline: none;
         }
     }
+}
+
+.app-input:active {
+    box-shadow: 2px 2px 15px #8707ff inset;
 }
 
 @media only screen and (max-width: $phone-width) {

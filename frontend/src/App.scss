@@ -2,9 +2,9 @@
 
 .app-wrapper {
   background-color: $base-color;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  // height: 100%;
+  // display: flex;
+  // flex-direction: column;
   // align-items: center;
   // justify-content: center;
   // font-size: calc(10px + 2vmin);
@@ -12,4 +12,26 @@
   // background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(url-shortner-image.png);
   // background-size: cover;
   // background-position: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  background: linear-gradient(-45deg, #ee7752, #dc84a6, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  // height: 100vh;
+  
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
