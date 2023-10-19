@@ -15,7 +15,7 @@
 
 .url-box {
     width: 600px;
-    height: 250px;
+    height: 300px;
     box-shadow: 0 2px 4px #ccc;
     border-radius: 10px;
     padding: 5px 30px 10px 30px;
@@ -24,7 +24,7 @@
 
     @media (max-width: 768px) {
         width: 220px;
-        height: 280px;
+        height: 300px;
     }
 }
 
@@ -84,4 +84,13 @@
             font-size: 12px;
         }
     }
+}
+
+.app-url-box-output-wrapper {
+    width: 100%;
+    height: 50px;
+    color:#000000;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }

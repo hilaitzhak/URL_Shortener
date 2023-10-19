@@ -43,7 +43,7 @@ function AppUrlBox() {
                 <div className='app-url-box-para-wrapper'>
                         <p className='app-url-box-para'>URL shortener is a web service that converts long and complex website addresses into shorter, more user-friendly URLs, making it easier to share links.</p>
                 </div>
-                <div className='app-row'>
+                <div className='app-url-box-output-wrapper'>
                     {output && (<a href={output} target="_blank" rel="noopener noreferrer">{output}</a>)}
                 </div>
             </div>
