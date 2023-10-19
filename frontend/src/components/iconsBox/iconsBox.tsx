@@ -8,7 +8,7 @@ function AppIconsBox() {
             <div className='app-icons-box'>
                 <div className='app-icon-box'>
                     <div className='app-icon-box-front-side'>
-                        <ThumbUpOffAlt style={{ fontSize: 'xxx-large', maxWidth: '100%', height: 'auto', verticalAlign: 'middle', color: 'black' }} />
+                        <ThumbUpOffAlt className="app-icon"/>
                         <h3 className='app-icon-box-title'>Easy</h3>
                     </div>
                     <div className='app-icon-box-back-side'>
@@ -17,7 +17,7 @@ function AppIconsBox() {
                 </div>
                 <div className='app-icon-box'>
                     <div className='app-icon-box-front-side'>
-                        <Share style={{ fontSize: 'xxx-large', maxWidth: '100%', height: 'auto', verticalAlign: 'middle', color: 'black'}}/>
+                        <Share className="app-icon"/>
                         <h3 className='app-icon-box-title'>Share</h3>
                     </div>
                     <div className='app-icon-box-back-side'>
@@ -26,7 +26,7 @@ function AppIconsBox() {
                 </div>
                 <div className='app-icon-box'>
                     <div className='app-icon-box-front-side'>
-                        <InsertEmoticon style={{ fontSize: 'xxx-large', maxWidth: '100%', height: 'auto', verticalAlign: 'middle', color: 'black' }} />
+                        <InsertEmoticon className="app-icon" />
                         <h3 className='app-icon-box-title'>User Friendly</h3>
                     </div>
                     <div className='app-icon-box-back-side'>
@@ -37,7 +37,7 @@ function AppIconsBox() {
             <div className='app-icons-box'>
                 <div className='app-icon-box'>
                     <div className='app-icon-box-front-side'>
-                        <VisibilityOutlined style={{ fontSize: 'xxx-large', maxWidth: '100%', height: 'auto', verticalAlign: 'middle', color: 'black' }}/>
+                        <VisibilityOutlined className="app-icon"/>
                         <h3 className='app-icon-box-title'>Aesthetics</h3>
                     </div>
                     <div className='app-icon-box-back-side'>
@@ -46,7 +46,7 @@ function AppIconsBox() {
                 </div>
                 <div className='app-icon-box'>
                     <div className='app-icon-box-front-side'>
-                        <MonetizationOnOutlined fontSize="large" style={{ fontSize: 'xxx-large', maxWidth: '100%', height: 'auto', verticalAlign: 'middle', color: 'black' }} />
+                        <MonetizationOnOutlined className="app-icon"/>
                         <h3 className='app-icon-box-title'>Free</h3>
                     </div>
                     <div className='app-icon-box-back-side'>
@@ -55,7 +55,7 @@ function AppIconsBox() {
                 </div>
                 <div className='app-icon-box'>
                     <div className='app-icon-box-front-side'>
-                        <MobileFriendly style={{ fontSize: 'xxx-large', maxWidth: '100%', height: 'auto', verticalAlign: 'middle', color: 'black' }}/>
+                        <MobileFriendly className="app-icon"/>
                         <h3 className='app-icon-box-title'>Mobile Friendly</h3>
                     </div>
                     <div className='app-icon-box-back-side'>
@@ -68,4 +68,5 @@ function AppIconsBox() {
 }
 
 export default AppIconsBox;
+
 // export {};

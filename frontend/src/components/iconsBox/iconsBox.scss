@@ -1,54 +1,48 @@
 @import '../../variables.scss';
 
 .app-icons-box-wrapper {
-    // height: 40%;
-    // width: 80%;
-    // border: 3px dashed $base-color;
-    // border-radius: 5px;
-    // padding: 50px;
-    // align-items: center;
-    // justify-content: center;
-    // display: flex;
-    // width: 100%;
-    // height: calc(100% - 160px);    // display: flex;
     align-items: center;
     justify-content: center;
     display: flex;
     width: 100%;
     height: calc(100vh - 50px);
+
+    @media (max-width: 768px) {
+        height: 370px; /* Allow the container to adapt to content on smaller screens */
+    }
 }
 
 .app-icons-box {
-    // height: 500px;
-    // width: 85%;
-    // // border: 3px dashed $base-color;
-    // // border-radius: 5px;
-    // // padding: 0 20px;
-    // align-items: center;
-    // justify-content: center;
-    // display: flex;
-
     width: 65%;
-    height: 250px; /* Adjust the height as needed */
+    height: 250px;
     display: flex;
     flex-direction: row;
-    // flex-wrap: wrap; /* Allow icons to wrap to the next row if necessary */
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 768px) {
+        width: 80%; /* Make the icon boxes take full width on small screens */
+        height: auto; /* Allow the container to adapt to content on smaller screens */
+        justify-content: space-between;
+        padding: 15px;
+    }
 
     &> .app-icon-box {
         position: relative;
         display: flex;
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center; /* Center elements horizontally */
-        justify-content: center; /* Vertically center child elements */
-        // text-align: center; /* Horizontally center text content */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 160px;
         height: 200px;
-        // padding: 30px;
         transition: transform 0.8s;
         transform-style: preserve-3d;
         cursor: pointer;
+
+        @media (max-width: 768px) {
+            height: 85px;
+            width: 85px;
+        }
     }
 }
 
@@ -116,30 +110,43 @@
   }
 }
 
+.app-icon {
+    // font-size: 48px; /* Adjust the size according to your preference */
+    // max-width: 100%;
+    // height: auto;
+    transform: scale(1.8);
+    vertical-align: middle;
+    color: white;
+
+    @media (max-width: 768px) {
+        transform: scale(0.8);
+    }
+}
+
+
 .app-icon-box-title {
-    // margin: 10px 2px 2px 2px;
-    color: #000000;
+    color: #4d0095;
     font-size: 20px;
     font-weight: bold;
     padding: 10px;
+
+    @media (max-width: 768px) {
+        font-size: 8px; /* Reduce font size for better phone display */
+        padding: 5px; /* Adjust padding for better phone display */
+
+    }
 }
 
 .app-icon-box-para {
-    color: #000000;
+    color: #ffffff;
     font-size: 15px;
     font-weight: 360;
     line-height: 1.5;
     text-align: center;
     padding: 5px;
+
+    @media (max-width: 768px) {
+        font-size: 10px; /* Reduce font size for better phone display */
+        padding: 5px; /* Adjust padding for better phone display */
+    }
 }
-
-// .first-row {
-//     margin: 20px 0;
-//     justify-content: space-between;
-//     width: 100%;
-// }
-
-// .second-row {
-//     height: 100%;
-//     width: 100%;
-// }

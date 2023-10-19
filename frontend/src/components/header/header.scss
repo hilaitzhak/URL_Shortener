@@ -2,13 +2,20 @@
 
 .app-header-wrapper {
     height: 40px;
-    // background-color: $base-color-header;
     padding: 40px 20px;
-    border-radius:  0 0 10px 10px;
+
+    @media (max-width: 768px) {
+        height: auto;
+        padding: 10px;
+    }
 }
 
 .app-header-title {
     font-size: 60px;
     font-weight: bold;
-    color: #000000;
+    color: #ffffff;
+    
+    @media (max-width: 768px) {
+        font-size: 24px;
+    }
 }

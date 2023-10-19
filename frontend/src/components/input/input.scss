@@ -6,38 +6,44 @@
     margin-right: 15px;
     box-sizing: border-box;
 
+
     &> .app-input {
         background-color: #fff;
-        // border: 1px solid rgba(175,185,197,.36);
-        // color: #161c34;
         font-size: 20px;
         line-height: 28px;
         margin-bottom: 0;
         width: 100%;
-        // border-radius: 20px;
         box-sizing: inherit;
         padding: 20px;
         color: #8707ff;
         border: 2px solid #8707ff;
         border-radius: 10px;
-        // padding: 10px 25px;
         background: transparent;
 
-        &:focus {
-            outline: none;
+        // &:focus {
+        //     outline: none;
+        // }
+
+        @media (max-width: 768px) {
+            width: 100%; /* Make the input wrapper 80% width for small screens */
+            height: 100%;
+
+            & > .app-input {
+                font-size: 10px; /* Reduce font size for smaller screens */
+            }
+        }
+    }
+
+    &> .app-input::placeholder {
+        font-size: 17px;
+        color: white;
+
+        @media (max-width: 768px) {
+            font-size: 13px; /* You can adjust the size as needed */
         }
     }
 }
 
 .app-input:active {
     box-shadow: 2px 2px 15px #8707ff inset;
-}
-
-@media only screen and (max-width: $phone-width) {
-    .app-input-wrapper {
-        width: 80%;
-        &> .app-input {
-            font-size: 17px;
-        }
-    }
 }
