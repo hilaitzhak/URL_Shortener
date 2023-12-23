@@ -1,6 +1,6 @@
 {
     "port": 3001,
-    "base_redirect_url": "http://localhost:3001/url/",
+    "base_redirect_url": "http://localhost:3001/url",
     "db": {
         "host": "localhost",
         "user": "root",
