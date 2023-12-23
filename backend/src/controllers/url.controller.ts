@@ -4,10 +4,8 @@ import { UrlDBService } from "../services/url-db.service";
 import { nanoid } from "nanoid";
 import { URLRequest, URLResponse } from "../models/interfaces/global.interface";
 
-
-// const base_url = `http://localhost:${port}`;
-
 export class UrlController {
+
     private url_db_service: UrlDBService;
     constructor() {
         this.url_db_service = new UrlDBService();
@@ -38,7 +36,7 @@ export class UrlController {
             }
             const short_str = nanoid(5);
             const shorten_url = `${req.base_redirect_url}/${short_str}`;
-            this.url_db_service.saveURL(url, shorten_url);
+            await this.url_db_service.saveURL(url, shorten_url);
             const result = {url: shorten_url};
             res.send(result);
         } catch (error: any) {

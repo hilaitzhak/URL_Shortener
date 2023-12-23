@@ -10,7 +10,8 @@ export class initDBService extends DBService {
     }
 
     private async createURLTable () {
-        await this.query(`
+        try {
+            await this.query(`
             CREATE TABLE IF NOT EXISTS urls (
                 id int NOT NULL AUTO_INCREMENT,
                 original_url VARCHAR(500) NOT NULL,
@@ -20,5 +21,8 @@ export class initDBService extends DBService {
                 INDEX (shorten_url)
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
         `);
+        } catch (error) {
+           console.log(error) 
+        }
     }
 }

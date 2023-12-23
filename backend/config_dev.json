@@ -1,0 +1,12 @@
+{
+    "port": 3001,
+    "base_redirect_url": "http://localhost:3001/url/",
+    "db": {
+        "host": "localhost",
+        "user": "root",
+        "password": "root",
+        "multipleStatements": true,
+        "charset": "utf8mb4",
+        "database": "url_shortner"
+    }
+}

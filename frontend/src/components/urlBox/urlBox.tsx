@@ -24,7 +24,7 @@ function AppUrlBox() {
             url
         };
         const response = await axios.post('http://localhost:3001/url/shorten', body);
-        const short_url = response?.data?.url || '';
+        const short_url = response?.data?.url || 'Services Unavailable';
         setOutput(short_url);
     };
     const onInputChange: onInputChangeHandler = (value: string) => {

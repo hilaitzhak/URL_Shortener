@@ -10,6 +10,10 @@ export class DBConnectionProvider {
     private constructor() {}
 
     public static async connect(config: ConnectionOptions): Promise<void> {
-        DBConnectionProvider._connection = await createConnection(config);
+        try {
+            DBConnectionProvider._connection = await createConnection(config);
+        } catch (error) {
+            console.log(error)
+        }
     }
 }

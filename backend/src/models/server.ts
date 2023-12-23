@@ -9,15 +9,16 @@ import { URLRequest, URLResponse } from "./interfaces/global.interface";
 export class AppServer {
     public app: Express;
     private config: AppConfig;
+    
     constructor() {
-        this.init();
     }
 
-    private init() {
+    public async init() {
         this.setConfig();
-        this.initDB();
+        await this.initDB();
         this.setApp();
         this.setMiddlewares();
+        this.setBaseRoutes();
         this.setRouter();
     }
 
@@ -41,6 +42,12 @@ export class AppServer {
         this.app.use((req: URLRequest, res: URLResponse, next) => {
             req.base_redirect_url = this.config.base_redirect_url;
             next();
+        });
+    }
+
+    private setBaseRoutes() {
+        this.app.use('/health', (req, res) => {
+            res.status(200).send('OK');
         });
     }
 
