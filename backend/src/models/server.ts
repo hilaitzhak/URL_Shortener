@@ -23,7 +23,7 @@ export class AppServer {
     }
 
     private async initDB() {
-        await DBConnectionProvider.connect(this.config.db);
+        DBConnectionProvider.createPool(this.config.db);
         const init_db_service = new initDBService();
         await init_db_service.init();
     };

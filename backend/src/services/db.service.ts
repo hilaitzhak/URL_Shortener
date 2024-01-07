@@ -7,11 +7,12 @@ export class DBService {
 
     protected async query(query: string, params: any[] = []) {
         try {
-            let db_res: any = (await DBConnectionProvider.connection.query(query.trim(), params) || [])[0];
-            if (!Array.isArray(db_res)) {
-                db_res = [db_res];
+            let db_res: any = await DBConnectionProvider.pool.query(query.trim(), params) || [];
+            let db_res2 = db_res[0];
+            if (!Array.isArray(db_res2)) {
+                db_res2 = [db_res2];
             }
-            const res = db_res.filter((result: any) => !Object.keys(result).includes('affectedRows'));
+            const res = db_res2.filter((result: any) => !Object.keys(result).includes('affectedRows'));
             return res;
         } catch (error) {
             console.log(error)

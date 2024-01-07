@@ -6,6 +6,10 @@
         "user": "root",
         "password": "root",
         "multipleStatements": true,
+        "waitForConnections": true,
+        "connectionLimit": 10,
+        "enableKeepAlive": true,
+        "keepAliveInitialDelay": 0,
         "charset": "utf8mb4",
         "database": "url_shortner"
     }

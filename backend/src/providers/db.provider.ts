@@ -1,17 +1,17 @@
-import { Connection, ConnectionOptions, createConnection } from "mysql2/promise";
+import { Pool, PoolOptions, createPool } from "mysql2/promise";
 
 export class DBConnectionProvider {
-    private static _connection: Connection;
+    private static _pool: Pool;
     
-    public static get connection(): Connection {
-        return DBConnectionProvider._connection;
+    public static get pool(): Pool {
+        return DBConnectionProvider._pool;
     }
 
     private constructor() {}
 
-    public static async connect(config: ConnectionOptions): Promise<void> {
+    public static createPool(config: PoolOptions): void {
         try {
-            DBConnectionProvider._connection = await createConnection(config);
+            DBConnectionProvider._pool = createPool(config);
         } catch (error) {
             console.log(error)
         }

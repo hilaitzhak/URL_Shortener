@@ -79,17 +79,22 @@ To run the project locally, follow these steps:
 
     Server config example:
     ```json
-        {
-            "port": 3001,
-            "db": {
-                "host": "localhost",
-                "user": "<mysql_db_user>",
-                "password": "<mysql_db_password>",
-                "multipleStatements": true,
-                "charset": "utf8mb4",
-                "database": "url_shortener"
-            }
+    {
+        "port": 3001,
+        "base_redirect_url": "http://localhost:3001/url",
+        "db": {
+            "host": "localhost",
+            "user": "root",
+            "password": "root",
+            "multipleStatements": true,
+            "waitForConnections": true,
+            "connectionLimit": 10,
+            "enableKeepAlive": true,
+            "keepAliveInitialDelay": 0,
+            "charset": "utf8mb4",
+            "database": "url_shortner"
         }
+    }
     ```
 
 5. Start the backend server:
