@@ -13,6 +13,7 @@ export class AppConfig {
             this.port = config?.port || 3001;
             this.base_redirect_url = config?.base_redirect_url || '';
         } catch (error) {
+            console.log('AppConfig/constructor - error', error)
             throw new Error("ERROR: config.json doesn't exists");
         }   
     }
