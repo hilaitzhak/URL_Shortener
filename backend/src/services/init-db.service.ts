@@ -27,7 +27,7 @@ export class initDBService extends DBService {
             CREATE TABLE IF NOT EXISTS urls (
                 id int NOT NULL AUTO_INCREMENT,
                 original_url TEXT NOT NULL,
-                shorten_url VARCHAR(50) NOT NULL,
+                shorten_url VARCHAR(250) NOT NULL,
                 PRIMARY KEY (id),
                 INDEX idx_original_url (original_url(255)),
                 INDEX (shorten_url)
