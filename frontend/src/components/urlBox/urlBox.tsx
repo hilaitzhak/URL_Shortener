@@ -23,7 +23,7 @@ function AppUrlBox() {
         const body = {
             url
         };
-        const response = await axios.post('https://url-backend.hilaitzhak.com/url/shorten', body);
+        const response = await axios.post(`${process.env.REACT_APP_URL_SHORTENER_API}/url/shorten`, body);
         const short_url = response?.data?.url || 'Services Unavailable';
         setOutput(short_url);
     };

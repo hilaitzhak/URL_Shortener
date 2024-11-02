@@ -11,7 +11,15 @@ export class DBConnectionProvider {
 
     public static createPool(config: PoolOptions): void {
         try {
-            DBConnectionProvider._pool = createPool(config);
+            DBConnectionProvider._pool = createPool({
+                ...config,
+                database: 'url_shortener',
+                keepAliveInitialDelay: 0,
+                enableKeepAlive: true,
+                charset: 'utf8mb4',
+                waitForConnections: true,
+                multipleStatements: true
+            });
         } catch (error) {
             console.log(error)
         }

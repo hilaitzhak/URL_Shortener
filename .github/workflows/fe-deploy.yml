@@ -1,39 +1,39 @@
-name: Deploy URL Shortener Frontend App
+# name: Deploy URL Shortener Frontend App
 
-on:
-  push:
-    branches: [ master ]
-    paths: ['frontend/**']
+# on:
+#   push:
+#     branches: [ master ]
+#     paths: ['frontend/**']
   
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: Checkout
+#       uses: actions/checkout@v3
 
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 20
+#     - uses: actions/setup-node@v3
+#       with:
+#         node-version: 20
 
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1
+#     - name: Configure AWS Credentials
+#       uses: aws-actions/configure-aws-credentials@v1
+#       with:
+#         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#         aws-region: us-east-1
 
-    - name: Install Dependencies
-      run: npm install
-      working-directory: frontend
+#     - name: Install Dependencies
+#       run: npm install
+#       working-directory: frontend
 
-    - name: Build URL Shortener Frontend App
-      run: npm run build
-      working-directory: frontend
+#     - name: Build URL Shortener Frontend App
+#       run: npm run build
+#       working-directory: frontend
 
-    - name: Deploy frontend artifact to S3 bucket
-      run: aws s3 sync ./build/ s3://url.hilaitzhak.com --delete
-      working-directory: frontend
+#     - name: Deploy frontend artifact to S3 bucket
+#       run: aws s3 sync ./build/ s3://url.hilaitzhak.com --delete
+#       working-directory: frontend
 
-    - name: Invalidate cloudfront distribution
-      run: aws cloudfront create-invalidation --distribution-id E38P2IGKXIV7IH --paths "/*"
+#     - name: Invalidate cloudfront distribution
+#       run: aws cloudfront create-invalidation --distribution-id E38P2IGKXIV7IH --paths "/*"

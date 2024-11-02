@@ -8,22 +8,27 @@ export class AppConfig {
     public readonly base_redirect_url: string;
     constructor() {
         try {
-            const config = this.loadConfigFromFile()
+            const config = this.loadConfig()
             this.db = config?.db || {};
             this.port = config?.port || 3001;
             this.base_redirect_url = config?.base_redirect_url || '';
         } catch (error) {
             throw new Error("ERROR: config.json doesn't exists");
-        }
+        }   
     }
 
-    private loadConfigFromFile(): any {
-        let config_file_name = 'config_dev.json';
-        if (process.env.NODE_ENV === 'production') {
-            config_file_name = 'config.json';
+    private loadConfig(): any {
+        const config = {
+            port: process.env.PORT,
+            base_redirect_url: process.env.BASE_REDIRECT_URL,
+            db: {
+                host: process.env.MYSQL_HOST,
+                user: process.env.MYSQL_USER,
+                port: parseInt(process.env.MYSQL_PORT),
+                password: process.env.MYSQL_PASSWORD,
+                connectionLimit: parseInt(process.env.MYSQL_CONNECTION_LIMIT)
+            }
         }
-        const config_path = path.join(process.env.PWD, config_file_name);
-        const config = require(config_path);
         return config;
     }
 }

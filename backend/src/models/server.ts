@@ -5,6 +5,8 @@ import express, { Express } from "express";
 import { DBConnectionProvider } from "../providers/db.provider";
 import { initDBService } from "../services/init-db.service";
 import { URLRequest, URLResponse } from "./interfaces/global.interface";
+import dotenv from 'dotenv';
+dotenv.config();
 
 export class AppServer {
     public app: Express;

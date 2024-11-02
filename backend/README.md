@@ -24,7 +24,13 @@ docker build -t url-shortener-backend-image .
 docker tag url-shortener-backend-image 272538408060.dkr.ecr.us-east-1.amazonaws.com/usbp:latest
 ```
 
-3. Push to registry
+3. Login to registry
+
+```
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 272538408060.dkr.ecr.us-east-1.amazonaws.com
+```
+
+4. Push to registry
 
 ```
 docker push 272538408060.dkr.ecr.us-east-1.amazonaws.com/usbp:latest

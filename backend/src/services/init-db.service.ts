@@ -6,7 +6,19 @@ export class initDBService extends DBService {
     }
 
     public async init() {
+        await this.createURLShortenerDB();
         await this.createURLTable();
+    }
+
+    private async createURLShortenerDB () {
+        try {
+            await this.query(`CREATE DATABASE IF NOT EXISTS url_shortener
+                CHARACTER SET utf8mb4
+                COLLATE utf8mb4_general_ci;`);
+        } catch (error) {
+           console.log('initDBService/createURLShortenerDB - error', error);
+           throw error;
+        }
     }
 
     private async createURLTable () {
@@ -22,7 +34,8 @@ export class initDBService extends DBService {
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
         `);
         } catch (error) {
-           console.log(error) 
+           console.log('initDBService/createURLTable - error', error);
+           throw error;
         }
     }
 }
