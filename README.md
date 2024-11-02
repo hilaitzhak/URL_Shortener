@@ -74,27 +74,18 @@ To run the project locally, follow these steps:
     
     path:
     ```
-    backend/config.json
+    backend/.env
     ```
 
     Server config example:
-    ```json
-    {
-        "port": 3001,
-        "base_redirect_url": "http://localhost:3001/url",
-        "db": {
-            "host": "localhost",
-            "user": "root",
-            "password": "root",
-            "multipleStatements": true,
-            "waitForConnections": true,
-            "connectionLimit": 10,
-            "enableKeepAlive": true,
-            "keepAliveInitialDelay": 0,
-            "charset": "utf8mb4",
-            "database": "url_shortner"
-        }
-    }
+    ```sh
+        MYSQL_HOST="localhost"
+        MYSQL_USER= "root"
+        MYSQL_PORT= "12439"
+        MYSQL_PASSWORD= "root"
+        MYSQL_CONNECTION_LIMIT="10"
+        PORT=3001
+        BASE_REDIRECT_URL="http://localhost:3001/url"
     ```
 
 5. Start the backend server:
@@ -109,8 +100,19 @@ To run the project locally, follow these steps:
     cd frontend
     npm install
     ```
+7. Create frontend config:
+    
+    path:
+    ```
+    frontend/.env
+    ```
 
-7. Start the frontend development server:
+    Frontend config example:
+    ```sh
+    REACT_APP_URL_SHORTENER_API="http://localhost:3001"
+    ```
+
+8. Start the frontend development server:
     ``` bash
     npm start
     ```
